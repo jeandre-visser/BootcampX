@@ -1,5 +1,5 @@
-SELECT COUNT(assistance_requests.*) as total_assistances, name
+SELECT COUNT(assistance_requests.*) as total_assistances, students.name
 FROM assistance_requests
-JOIN students ON student_id = students.id
+JOIN students ON students.id = student_id
 WHERE name = 'Elliot Dickinson'
-GROUP BY name;
+GROUP BY students.name;
